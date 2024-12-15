@@ -1,0 +1,135 @@
+# sistem-informasi-pengelolaan-tanaman-dan-distribusi-bibit-dinas-lingkungan-dan-kehutanan-papua
+Sistem informasi pengelolaan pengadaan tanaman dan distribusi bibit gratis oleh Dinas Lingkungan dan Kehutanan Provinsi Papua
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Informasi Pengelolaan Pengadaan Tanaman</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Dinas Lingkungan dan Kehutanan Papua</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#database">Database Bibit</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pendaftaran">Pendaftaran</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pengajuan">Pengajuan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pelacakan">Pelacakan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#laporan">Laporan</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <!-- Database Bibit -->
+        <section id="database">
+            <h2 class="text-success">Database Bibit</h2>
+            <p>Menyimpan informasi tentang berbagai jenis bibit yang tersedia, termasuk spesifikasi, jumlah, dan lokasi penyimpanan.</p>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Jenis Bibit</th>
+                        <th>Spesifikasi</th>
+                        <th>Jumlah</th>
+                        <th>Lokasi Penyimpanan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mahoni</td>
+                        <td>Tinggi 1m</td>
+                        <td>500</td>
+                        <td>Gudang Jayapura</td>
+                    </tr>
+                    <tr>
+                        <td>Jati</td>
+                        <td>Tinggi 1.5m</td>
+                        <td>300</td>
+                        <td>Gudang Sorong</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Pendaftaran Pengguna -->
+        <section id="pendaftaran" class="mt-5">
+            <h2 class="text-success">Pendaftaran Pengguna</h2>
+            <p>Formulir pendaftaran untuk masyarakat yang ingin menjadi penerima bibit.</p>
+            <form>
+                <div class="mb-3">
+                    <label for="nama" class="form-label">Nama Lengkap</label>
+                    <input type="text" class="form-control" id="nama" placeholder="Masukkan nama lengkap">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Masukkan email">
+                </div>
+                <div class="mb-3">
+                    <label for="alamat" class="form-label">Alamat</label>
+                    <textarea class="form-control" id="alamat" rows="3" placeholder="Masukkan alamat lengkap"></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Daftar</button>
+            </form>
+        </section>
+
+        <!-- Pengajuan Permohonan -->
+        <section id="pengajuan" class="mt-5">
+            <h2 class="text-success">Pengajuan Permohonan</h2>
+            <p>Formulir untuk mengajukan permohonan bibit.</p>
+            <form>
+                <div class="mb-3">
+                    <label for="jenisBibit" class="form-label">Jenis Bibit</label>
+                    <select class="form-select" id="jenisBibit">
+                        <option value="mahoni">Mahoni</option>
+                        <option value="jati">Jati</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="jumlah" class="form-label">Jumlah</label>
+                    <input type="number" class="form-control" id="jumlah" placeholder="Masukkan jumlah yang diinginkan">
+                </div>
+                <button type="submit" class="btn btn-success">Ajukan</button>
+            </form>
+        </section>
+
+        <!-- Pelacakan Distribusi -->
+        <section id="pelacakan" class="mt-5">
+            <h2 class="text-success">Pelacakan Distribusi</h2>
+            <p>Masukkan nomor pengajuan Anda untuk melacak status distribusi bibit.</p>
+            <form>
+                <div class="mb-3">
+                    <label for="noPengajuan" class="form-label">Nomor Pengajuan</label>
+                    <input type="text" class="form-control" id="noPengajuan" placeholder="Masukkan nomor pengajuan">
+                </div>
+                <button type="submit" class="btn btn-success">Lacak</button>
+            </form>
+        </section>
+
+        <!-- Laporan dan Statistik -->
+        <section id="laporan" class="mt-5">
+            <h2 class="text-success">Laporan dan Statistik</h2>
+            <p>Menyediakan laporan berkala mengenai jumlah bibit yang didistribusikan dan umpan balik dari masyarakat.</p>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Laporan Terbaru</h5>
+                    <p>Jumlah bibit yang telah didistribusikan: 800</p>
+                    <p>Jumlah penerima: 200</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="bg-success text-white text-center py-3 mt-5">
+        <p>&copy; 2024 Dinas Lingkungan dan Kehutanan Provinsi Papua</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
